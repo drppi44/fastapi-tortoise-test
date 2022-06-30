@@ -16,6 +16,7 @@ services:
     environment:
       - DATABASE_URL=postgres://postgres:postgres@db:5432/web
       - REDIS_URL=redis://redis:6379
+      - TORTOISE_TEST_DB=postgres://postgres:postgres@db:5432/test_{}
     depends_on:
       - db
 
